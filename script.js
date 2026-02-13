@@ -17,7 +17,9 @@ increaseButton.addEventListener("click", function () {
 });
 
 decreaseButton.addEventListener("click", function () {
-	count = count - 1;
+	if (count > 0) {
+		count = count - 1;
+	}
 	updateDisplay();
 });
 
