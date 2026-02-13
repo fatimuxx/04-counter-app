@@ -4,6 +4,8 @@ const countDisplay = document.getElementById("count");
 const increaseButton = document.getElementById("increase");
 // Use const because this button reference should not change.
 const decreaseButton = document.getElementById("decrease");
+// Use const because this button reference should not change.
+const resetButton = document.getElementById("reset");
 
 let count = 0;
 
@@ -20,6 +22,11 @@ decreaseButton.addEventListener("click", function () {
 	if (count > 0) {
 		count = count - 1;
 	}
+	updateDisplay();
+});
+
+resetButton.addEventListener("click", function () {
+	count = 0;
 	updateDisplay();
 });
 
