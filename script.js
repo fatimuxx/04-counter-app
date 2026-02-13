@@ -2,6 +2,8 @@
 const countDisplay = document.getElementById("count");
 // Use const because this button reference should not change.
 const increaseButton = document.getElementById("increase");
+// Use const because this button reference should not change.
+const decreaseButton = document.getElementById("decrease");
 
 let count = 0;
 
@@ -11,6 +13,11 @@ function updateDisplay() {
 
 increaseButton.addEventListener("click", function () {
 	count = count + 1;
+	updateDisplay();
+});
+
+decreaseButton.addEventListener("click", function () {
+	count = count - 1;
 	updateDisplay();
 });
 
